@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step 6 - AI Mode Logic</title>
+    <link rel="stylesheet" href="../styles/steps/step-6-ai-mode-logic.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">AI Mode Border Animation Logic</header>
+
+      <main class="main">
+        <section class="card">
+          <h1>Why two layers are used</h1>
+          <div class="demo-row">
+            <div class="ai-inline-stack">
+              <button type="button" class="ai-effect-button" aria-hidden="true" tabindex="-1">
+                <span class="ai-effect-blur" aria-hidden="true"><span class="ai-effect-gradient"></span></span>
+                <span class="ai-effect-ring" aria-hidden="true"><span class="ai-effect-gradient"></span></span>
+                <span class="ai-effect-core" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="ai-inline-button" aria-label="AI Mode">
+                <span class="ai-inline-content">
+                  <span class="ai-inline-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Mode">
+                      <path d="M17.5 12c0-3.04 2.46-5.5 5.5-5.5-3.04 0-5.5-2.46-5.5-5.5 0 3.04-2.46 5.5-5.5 5.5 3.04 0 5.5 2.46 5.5 5.5z" />
+                      <path d="M15.65 11.58c.18-.5.27-1.03.31-1.58h-2c-.1 1.03-.51 1.93-1.27 2.69-.88.87-1.94 1.31-3.19 1.31C7.03 14 5 12.07 5 9.5 5 7.03 6.93 5 9.5 5c.46 0 .89.08 1.3.2l1.56-1.56C11.5 3.22 10.55 3 9.5 3 5.85 3 3 5.85 3 9.5S5.85 16 9.5 16c.56 0 2.26-.06 3.8-1.3l6.3 6.3 1.4-1.4-6.3-6.3c.4-.5.72-1.08.95-1.72z" />
+                    </svg>
+                  </span>
+                  <span>AI Mode</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="explanation">
+            <p>Layer 1: the bottom button renders only animation visuals and never receives clicks.</p>
+            <p>Layer 2: the top button keeps stable text and icon contrast while users interact.</p>
+            <p>On hover, a rotating conic gradient runs below, so glow appears only on outer edges.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

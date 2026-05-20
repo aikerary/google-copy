@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #1f1f1f;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  min-height: 60px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #ffe4bf;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+}
+
+.icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d8e9ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #146c2e;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: #f7f9fc;
+}
+
+.center-stack {
+  width: min(92vw, 640px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  transform: translateY(-12px);
+}
+
+.logo {
+  margin: 0;
+  font-size: clamp(36px, 7vw, 54px);
+  letter-spacing: 0;
+  background: #ffd7c8;
+  padding: 12px 28px;
+  border-radius: 12px;
+}
+
+.search-shell {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 24px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #d4f8dd;
+}
+
+.search-left,
+.search-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-right {
+  flex: 0 0 auto;
+  gap: 6px;
+}
+
+.search-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef3ff;
+}
+
+.search-icon:hover {
+  background: #dde7ff;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 16px;
+}
+
+.tool-icon {
+  min-height: 32px;
+  padding: 0 8px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef3ff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ai-layer {
+  min-height: 36px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  background: #cfd8f6;
+}
+
+.ai-outline,
+.ai-top {
+  min-height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ai-outline {
+  background: #a7b8f3;
+  color: #1f1f1f;
+}
+
+.ai-top {
+  background: #f8f9fa;
+  margin-left: -6px;
+}
+
+.ai-note {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #f5e0ff;
+  font-size: 13px;
+  text-align: center;
+}
+
+.action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #dce8ff;
+  width: 100%;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+button {
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  min-height: 38px;
+  padding: 0 16px;
+  background: #f8f9fa;
+  font-size: 14px;
+}
+
+.languages {
+  margin: 0;
+  background: #f5e0ff;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: #e8eaed;
+}
+
+.country {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #dadce0;
+}
+
+.footer-links {
+  min-height: 48px;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: #dbe8ff;
+}
+
+.left-links,
+.right-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 680px) {
+  .search-shell {
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  .search-right {
+    gap: 4px;
+  }
+
+  .ai-top,
+  .ai-outline,
+  .tool-icon {
+    font-size: 10px;
+  }
+}
